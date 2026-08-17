@@ -8,6 +8,7 @@ import { ServiceCard } from "@/components/sections/ServiceCard";
 import { WhyChoose } from "@/components/sections/WhyChoose";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { OfferBanner } from "@/components/sections/OfferBanner";
+import { CleaningPricing } from "@/components/sections/CleaningPricing";
 import { GalleryGrid } from "@/components/sections/GalleryGrid";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { AudienceStrip } from "@/components/sections/AudienceStrip";
@@ -116,6 +117,8 @@ export default function HomePage() {
           </ul>
         </Container>
       </section>
+
+      <CleaningPricing />
 
       <WhyChoose />
 
