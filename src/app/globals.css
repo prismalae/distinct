@@ -215,20 +215,6 @@
   animation: gradient-pan 6s ease-in-out infinite alternate;
 }
 
-/* Metallic gold text, for the offer figure. */
-@utility text-gradient-gold {
-  background-image: linear-gradient(
-    170deg,
-    var(--color-gold-light) 0%,
-    var(--color-gold) 45%,
-    var(--color-gold-deep) 72%,
-    var(--color-gold-light) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
 /* The brand gradient, slowly panning back and forth. The stops run out to
    emerald and back to blue so the palindrome reverses seamlessly — no jump at
    the loop point. Used on the gradient-border cards. */
@@ -268,21 +254,6 @@
   -webkit-background-clip: text;
   color: transparent;
   animation: gradient-pan 9s ease-in-out infinite alternate;
-}
-
-/* Gradient headline text. Only for display sizes — the spectrum is not
-   text-safe at body weight on white. */
-@utility text-gradient-brand {
-  background-image: linear-gradient(
-    90deg,
-    var(--color-brand-blue) 0%,
-    var(--color-brand-cyan) 40%,
-    var(--color-brand-teal) 70%,
-    var(--color-brand-emerald) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 /* 4px gradient rule used under section headings. Animated, so the accent is
@@ -378,15 +349,6 @@
    rather than a loop. Transform and opacity only, so each orb is a cached
    GPU layer and the large blur is rasterised once instead of every frame.
 ------------------------------------------------------------------------ */
-
-@keyframes drift {
-  from {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  to {
-    transform: translate3d(2%, -3%, 0) scale(1.08);
-  }
-}
 
 @keyframes drift-a {
   0% {
@@ -505,10 +467,6 @@
   .settle-in {
     animation: settle-in 1100ms var(--ease-out-soft) both;
   }
-
-  .ambient-drift {
-    animation: drift 22s ease-in-out infinite alternate;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -532,8 +490,7 @@
 
   .rise-in,
   .fade-in,
-  .settle-in,
-  .ambient-drift {
+  .settle-in {
     animation: none;
     opacity: 1;
     transform: none;

@@ -606,8 +606,6 @@ export const services: Service[] = [
   },
 ];
 
-export const serviceSlugs = services.map((service) => service.slug);
-
 export function getService(slug: string) {
   return services.find((service) => service.slug === slug);
 }

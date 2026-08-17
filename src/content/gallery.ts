@@ -214,10 +214,3 @@ export const galleryImages: GalleryImage[] = [
     service: "interior-fit-out-renovations",
   },
 ];
-
-/** Featured selection for the home page preview. */
-export const featuredImages = galleryImages.slice(0, 6);
-
-export function imagesForService(slug: string) {
-  return galleryImages.filter((image) => image.service === slug);
-}

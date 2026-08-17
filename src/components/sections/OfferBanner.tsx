@@ -11,7 +11,7 @@ export function OfferBanner() {
         <Reveal>
           {/* Emerald edge-glow panel, as on the brochure */}
           <div className="glow-accent relative overflow-hidden rounded-3xl bg-ink px-6 py-12 text-center sm:px-12 sm:py-16">
-  <AmbientBackdrop preset="center" />
+            <AmbientBackdrop preset="center" />
 
             <div className="relative">
               <p className="font-heading text-xs font-semibold tracking-[0.28em] text-accent uppercase sm:text-sm">
